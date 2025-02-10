@@ -1,17 +1,4 @@
-// let now = new Date();
-// console.log(JSON.stringify(now));
 
-// let now = new Date();
-
-// let year = now.getFullYear();  // Gets the year (e.g., 2025)
-// let month = now.getMonth() + 1;  // Gets the month (0-11, so we add 1)
-// let date = now.getDate();  // Gets the day of the month (1-31)
-// let hours = now.getHours();  // Gets the hours (0-23)
-// let minutes = now.getMinutes();  // Gets the minutes (0-59)
-// let seconds = now.getSeconds();  // Gets the seconds (0-59)
-
-// console.log(`Today is: ${date}/${month}/${year}`);
-// console.log(`Current time: ${hours}:${minutes}:${seconds}`);
 document.querySelector("button").addEventListener("click", () => {
   const task = document.getElementById("Task-input");
   if (task.value === "") {
