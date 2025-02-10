@@ -10,12 +10,15 @@ document.querySelector("button").addEventListener("click", () => {
     const th2 = document.createElement("th");
     const th3 = document.createElement("th");
     const th4 = document.createElement("th");
+    const th6 = document.createElement('th');
     let label = document.createElement("lable");
     let input = document.createElement("input");
+    let del = document.createElement("button");
+    del.textContent = "Delete";
     input.setAttribute("type", "radio");
     input.setAttribute("id", "rr");
 
-
+    th6.appendChild(del);
     label.appendChild(input);
     th1.textContent = task.value;
     th2.textContent = `${JSON.stringify(new Date().getDate())}/${JSON.stringify(
@@ -32,6 +35,7 @@ document.querySelector("button").addEventListener("click", () => {
     tr.appendChild(th2);
     tr.appendChild(th3);
     tr.appendChild(th4);
+    tr.appendChild(th6);
     table.appendChild(tr);
     task.value = "";
 
@@ -42,7 +46,10 @@ document.querySelector("button").addEventListener("click", () => {
         }
       });
     
-  
+      del.addEventListener("click",()=>{
+       table.removeChild(tr);
+       
+    });
   
 })
 
